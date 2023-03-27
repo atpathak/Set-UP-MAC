@@ -1,0 +1,2 @@
+kinit -f -l 7d -r 7d atpathak@CERN.CH
+#aklog -c cern.ch -k CERN.CH

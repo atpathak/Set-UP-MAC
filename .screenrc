@@ -1,0 +1,19 @@
+# example for .screenrc:
+# ===============================================================
+# ESCAPE - the COMMAND CHARACTER
+# ===============================================================
+defscrollback 5000
+# escape ^aa  # default
+escape ^pp  # suggested binding for emacs users
+
+# Prints the window names and highlight the current window in yellow.
+# On the right there is the time in green and the date in yellow.
+#
+caption always "%?%{+b kw}%-Lw%?%{yK}%n*%f %t%?(%u)%?%?%{wk}%+Lw%? %{gk}%=%c %{yk}%d/%M/%Y"
+screen -t win0
+#screen -t win1
+#screen -t win2
+#screen -t win3
+#screen -t win4
+#screen -t win5
+

@@ -1,0 +1,8 @@
+#!/bin/csh -f
+if ( `grep -n pdsf ${HOME}/.ssh/known_hosts | wc -l` > 0 ) then
+ set LTEMP=`grep -n pdsf ${HOME}/.ssh/known_hosts | awk -F":" '{print $1}'`
+ rm -f /tmp/known_hosts
+ sed ${LTEMP}d ${HOME}/.ssh/known_hosts > /tmp/known_hosts
+ mv -f /tmp/known_hosts ${HOME}/.ssh/known_hosts 
+endif
+ssh -X -Y atpathak@pdsf.cern.ch
